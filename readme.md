@@ -15,7 +15,7 @@ LIBRARIES:
 import random = import random library
 practice F string
 
-#COMMANDS
+# COMMANDS
 isinstance
 type  
 
@@ -82,3 +82,37 @@ Used to perform operations on individual bits of integers.
 ~ (NOT)
 << (Left shift)
 >> (Right shift) 
+
+# NOTE
+escape double quote with back slash character "\" - means escape
+
+"\n" means new line
+
+to escape a back slash, you have to escape back slashes too
+
+All numbers are true except 0
+
+A string will always be true unless it is empty
+
+# "any" command, is used to check if any value is true.
+
+        check = any([1,0,0])
+
+        print(check)
+
+# "all" command, is used to check if all values are true.
+
+        check = all([1,0,0])
+
+        print(check)
+
+# COMPLEX
+
+        num1 = complex(2,3)
+
+        print(num1.imag,num1.real)
+
+# Enums
+
+        used to represent constants, recommend using upper case letters for members
+

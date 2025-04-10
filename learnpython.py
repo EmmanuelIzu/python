@@ -1,3 +1,11 @@
-my_set = {1,2,3,4,5}
-str1 = "emmanuel"
-print(str1.endswith())
+class Myclass:
+
+    name1 = "emmanuel"
+    name2 = "Nkwocha"
+
+    @classmethod
+    def mth1(cls):
+        return(cls.name1+cls.name2)
+
+
+print (Myclass.mth1())
