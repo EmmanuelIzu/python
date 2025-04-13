@@ -1,11 +1,12 @@
-class Myclass:
+def do():
+    num1 = 0
 
-    name1 = "emmanuel"
-    name2 = "Nkwocha"
-
-    @classmethod
-    def mth1(cls):
-        return(cls.name1+cls.name2)
-
-
-print (Myclass.mth1())
+    def incr():
+        
+        def incr1():
+            nonlocal num1
+            num1+=1
+            return num1
+        return incr1()
+    return incr()+1
+print(do())
