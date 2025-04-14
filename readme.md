@@ -94,6 +94,8 @@ All numbers are true except 0
 
 A string will always be true unless it is empty
 
+"+= command on will extend a list as an extend function will.
+
 # "any" command, is used to check if any value is true.
 
         check = any([1,0,0])
@@ -116,3 +118,159 @@ A string will always be true unless it is empty
 
         used to represent constants, recommend using upper case letters for members
 
+# Difference between a Dictionary and a SET
+
+dictionaries have key value pairs
+example dict1 = {'emmanuel':1, 'izu':2, 'nkwocha':3}
+
+while a set has no key value pair
+example set1 = {'emmanuel','izu','nkwocha'}
+
+# THE NONLOCAL COMMAND
+The non local is used to call a variable in a nexted function.
+
+def do():
+    num1 = 0
+
+    def incr():
+        nonlocal num1
+        num1+=1
+        return num1
+    
+    return incr()
+
+print(do())
+
+#  OBJECTS
+
+An object is an instance of a class
+
+
+
+
+# SPLIT METHOD
+
+full_name = "Emmanuel Izuchukwu Nkwocha"
+
+splitname = full_name.split()
+
+print(splitname[1])
+
+# DOC STRING
+
+written using three double quote, example below is a class with DOC string, called using the help function.
+
+class User:
+    """This is a user class for this program, please 
+    refer to the help file for more class description"""
+
+    def __init__(self):
+        self.first_name = 'Emmanuel'
+        self.last_name ='Nkwocha'
+
+user1 = User()
+print(user1.first_name)
+print(user1.last_name)
+
+help(User)
+
+
+# Example class calling fields from an Enum class
+from enum import Enum
+
+class hold (Enum):
+    emmanuel = 1
+    Nkwocha = 2
+
+class User:
+    """This is a user class for this program, please 
+    refer to the help file for more class description"""
+
+    def __init__(self):
+        self.first_name = 'Emmanuel'
+        self.last_name ='Nkwocha'
+        self.number = hold.emmanuel.value
+
+user1 = User()
+print(user1.first_name)
+print(user1.last_name)
+print(user1.number)
+
+# Inheritance.
+The User class is inheriting from the education class
+
+class education:
+    def edu(self):
+        return "I have a masters degree"
+
+class User(education):
+    """This is a user class for this program, please 
+    refer to the help file for more class description"""
+
+    def __init__(self):
+        self.first_name = 'Emmanuel'
+        self.last_name ='Nkwocha'
+
+
+user1 = User()
+description = f"My name is {user1.first_name} {user1.last_name}, and {user1.edu()}"
+
+print(description)
+
+
+# Modules
+
+if __name__ == "__main__": this ensures a particular script is called only when run locally.
+
+# Importing a module from a LIB.
+
+first you need to create the __init__.py file in the library before that can work.
+
+# STANDARD LIBRARY
+example math and json
+
+
+# Lambda Functions.
+        lambda argurments: expression
+        # map
+        The map() function in Python is used to apply a given function to each item of an iterable (like a list, tuple, or set) and returns an iterator that yields the results. It provides a concise way to perform operations on sequences without using explicit loops. The map() function takes two arguments: the function to apply and the iterable to process. 
+
+def square(x):
+  return x * x
+
+numbers = [1, 2, 3, 4, 5]
+squared_numbers = map(square, numbers)
+
+print(list(squared_numbers))
+# Expected output: [1, 4, 9, 16, 25]
+
+below is same code solved with lambda
+
+lst1=[1,2,3,4,5]
+
+double_them = list(map(lambda x : x * x, lst1))
+
+print(double_them)
+
+        # filter 
+        he filter() function in Python is used to construct an iterator from elements of an iterable for which a function returns true. It essentially filters a sequence based on a given condition. The filter() function takes two arguments: a function and an iterable. The function is applied to each item in the iterable, and if the function returns True, the item is included in the resulting iterator. If the function returns False, the item is excluded. 
+
+def is_even(x):
+    return x % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6]
+even_numbers = filter(is_even, numbers)
+print(list(even_numbers))
+# Expected output: [2, 4, 6]
+
+below is same code with lambda
+
+lst1=[1,2,3,4,5,6]
+
+filter_them = list(filter(lambda x : x % 2 == 0, lst1))
+
+print(filter_them)
+
+
+
+# RECURSION

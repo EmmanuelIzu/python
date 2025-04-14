@@ -1,12 +1,25 @@
-def do():
-    num1 = 0
 
-    def incr():
-        
-        def incr1():
-            nonlocal num1
-            num1+=1
-            return num1
-        return incr1()
-    return incr()+1
-print(do())
+def my_decor(func):
+    """This is a decorator """
+    def add_func():
+        print("Do this first")
+        func()
+        print("Do this later")
+    return add_func
+
+
+@my_decor
+def say_hello():
+    print("hello here")
+
+
+@my_decor
+def say_Hi():
+    print("Hi here")
+
+
+say_hello()
+say_Hi()
+
+print(my_decor)
+
