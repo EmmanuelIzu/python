@@ -1,5 +1,19 @@
-lst1=[1,6,9,4,5]
+class anything1:
+    def call(self):
+        return "this is a call"
 
-filter_them = list(filter(lambda x : x % 2 == 0, lst1))
+class anything2:
+    def call(self):
+         return "this is a call"
 
-print(filter_them)
+
+
+def shout(calling):
+    print(calling.call())
+
+
+a = anything1()
+b = anything2()
+
+shout(a)
+shout(b)

@@ -21,5 +21,4 @@ def say_Hi():
 say_hello()
 say_Hi()
 
-print(my_decor)
 

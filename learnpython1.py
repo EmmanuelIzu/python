@@ -11,10 +11,13 @@ class User(education):
     def __init__(self,f_name,l_name):
         self.first_name = f_name
         self.last_name = l_name
+        
     
     def doit(self):
-        print(first_name)
-        print(last_name)
+        print(self.first_name)
+        print(self.last_name)
+        edu = self.edu()
+        print(edu)
         
 def bark():
     print("woof!")
