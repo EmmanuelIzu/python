@@ -1,29 +1,10 @@
+class Dog():
 
-
-class education:
-    def edu(self):
-        return "I have a masters degree"
-
-class User(education):
-    """This is a user class for this program, please  
-    refer to the help file for more class description"""
-
-    def __init__(self,f_name,l_name):
-        self.first_name = f_name
-        self.last_name = l_name
-        
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
     
-    def doit(self):
-        print(self.first_name)
-        print(self.last_name)
-        edu = self.edu()
-        print(edu)
-        
-def bark():
-    print("woof!")
+    def bark(self):
+        print(self.name)
 
-if __name__ == "__main__":
     
-    user1 = User('Emmanuel','Nkwocha')
-    user1.doit()
-

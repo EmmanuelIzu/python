@@ -1,19 +1,5 @@
-class anything1:
-    def call(self):
-        return "this is a call"
+num1 = 0
 
-class anything2:
-    def call(self):
-         return "this is a call"
-
-
-
-def shout(calling):
-    print(calling.call())
-
-
-a = anything1()
-b = anything2()
-
-shout(a)
-shout(b)
+while num1 < 10:
+    num1 = num1 + 1
+    print(num1)

@@ -1,18 +1,24 @@
-#variable and functions
-import random
+class firstclass():
+    class_variable =  "class variable"
 
-def get_choices ():
-    while True:
-        player_choice = input('Enter a choice (rock, paper, scissors:)')
-        choice_list = ['rock','paper','scissors']
-        computer_choice = random.choice(choice_list)
-        choices = {"player":player_choice, "computer":computer_choice}
+    def __init__(self, instance_variable):
+        self.instance_variable = instance_variable
+     
+    def instance_mathod(self):
+        return f"I called {self.class_variable and self.instance_variable}"
+    
+    @classmethod
+    def class_method(cls,me):
+        cls.me = me
+        return f"I called {cls.class_variable} and {cls.me}"
 
-        if computer_choice != player_choice:
-            print('try again')
-            continue
-        break
-    print("its a tie!")
+    @staticmethod
+    def static_method():
+        return "this is a static method"
+    
 
+mycall = firstclass("instance variable")
 
-get_choices()
+print(mycall.class_method("me"))
+print(mycall.instance_mathod())
+print(mycall.static_method())

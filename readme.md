@@ -274,3 +274,118 @@ print(filter_them)
 
 
 # RECURSION
+
+# class inheritance.
+    class education:
+    def edu(self):
+        return "I have a masters degree"
+
+class User(education):
+    """This is a user class for this program, please  
+    refer to the help file for more class description"""
+
+    def __init__(self,f_name,l_name):
+        self.first_name = f_name
+        self.last_name = l_name
+        
+    
+    def doit(self):
+        print(self.first_name)
+        print(self.last_name)
+        edu = self.edu()
+        print(edu)
+        
+def bark():
+    print("woof!")
+
+if __name__ == "__main__":
+    
+    user1 = User('Emmanuel','Nkwocha')
+    user1.doit()
+
+# Decorators
+def my_decor(func):
+    """This is a decorator """
+    def add_func():
+        print("Do this first")
+        func()
+        print("Do this later")
+    return add_func
+
+
+@my_decor
+def say_hello():
+    print("hello here")
+
+
+@my_decor
+def say_Hi():
+    print("Hi here")
+
+
+say_hello()
+say_Hi()
+
+
+# Annotations
+
+def add (a : int, b : int) -> float:
+    return float(a+b)
+
+
+print(add(3,3))
+
+
+# Exception
+
+try:
+    a : int = input('Enter your second value')
+    b : int = input('Enter your first value')
+    addition = int(a + b)
+except ZeroDivisionError:
+    print('You cannot divide by zero')
+
+except ValueError:
+    print('this operand is not supported')
+
+else :
+    print(f"the answer is {addition}")
+
+finally: 
+    print('good job, well done')
+
+
+# WITH COMMAND
+
+# LIST COMPRESSIONS
+
+numbers = [1,2,3,4,5]
+numbers_power_2 = [n**2 for n in numbers]
+
+print(numbers_power_2)
+
+#  POLYMORPHISM
+# You could use the if statement to check if a list is empty
+
+# Example Dictionary
+
+dict1 = {
+    "firstname" : "Emmanuel",
+    "Middlename" : "Izuchukwu",
+    "lastname" : "Nkwocha"
+    }
+print(dict1.items())
+
+for key,value in dict1.items():
+    print(key , value)
+
+# sorted() - used to sort a list or dictionary.+
+
+
+# Abritrary Number of Arguments
+
+def call_names(*names):
+    print(names)
+
+
+call_names('emmanuel','izu','nkwocha')
