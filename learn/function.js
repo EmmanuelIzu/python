@@ -1,15 +1,41 @@
+const arryofNames = ['emmanuel','Izuchukwu','nkwocha','chidinma', 'precious'];
+
+const arti = document.createElement('article');
+const unorderedls = document.createElement('ul')
 
 
-setTimeout(() =>{
-    console.log("this waited for 5 sec before dsiplay")
-},5000)
+arryofNames.forEach(element => {
+    const newlist = document.createElement('li');
+    newlist.innerHTML = element;
+    unorderedls.append(newlist);
+});
 
-setTimeout(() =>{
-    console.log("this waited for 10 sec before dsiplay")
-},5000)
-let arr = [1,23,4,4,64]
 
-for (const element of arr) {
-    console.log(element);
-}
+arti.append(unorderedls)
 
+const main = document.querySelector("main");
+
+main.append(arti)
+
+
+const arryofNames = ['emmanuel','Izuchukwu','nkwocha','chidinma', 'precious'];
+const arryofNames2 = ['emmanuel','Izuchukwu','nkwocha','chidinma', 'precious'];
+
+const hold = [arryofNames,arryofNames2];
+
+let newarr2 = hold.map((element) => {
+    let insidearr = element.forEach(element => {
+        console.log(element)
+    });
+});
+
+
+const add = function(){};
+
+const sub = () =>{};
+
+function mul(){};
+
+
+
+(function(){})();
